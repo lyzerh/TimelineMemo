@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_background"
+    android:padding="14dp">
+
+    <!-- Top Header: Badge, Date, Counter -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/widget_counter_text"
+            android:layout_toStartOf="@+id/widget_counter_text">
+
+            <TextView
+                android:id="@+id/widget_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TODAY"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:textColor="#4F46E5"
+                android:background="@drawable/widget_today_badge"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp" />
+
+            <TextView
+                android:id="@+id/widget_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9月27日 周日"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#0F172A"
+                android:layout_marginLeft="6dp"
+                android:layout_marginStart="6dp"
+                android:singleLine="true"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/widget_counter_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 / 0"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#64748B"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- Dividing line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F1F5F9"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Tasks List Container -->
+    <LinearLayout
+        android:id="@+id/widget_tasks_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Task Row 1 -->
+        <LinearLayout
+            android:id="@+id/task_row_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/task_time_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09:00"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#4F46E5"
+                android:background="@drawable/widget_time_pill"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp" />
+
+            <TextView
+                android:id="@+id/task_title_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="任务名称"
+                android:textSize="12sp"
+                android:textColor="#1E293B"
+                android:layout_marginLeft="6dp"
+                android:layout_marginStart="6dp"
+                android:singleLine="true"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <!-- Task Row 2 -->
+        <LinearLayout
+            android:id="@+id/task_row_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/task_time_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14:00"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#4F46E5"
+                android:background="@drawable/widget_time_pill"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp" />
+
+            <TextView
+                android:id="@+id/task_title_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="任务名称"
+                android:textSize="12sp"
+                android:textColor="#1E293B"
+                android:layout_marginLeft="6dp"
+                android:layout_marginStart="6dp"
+                android:singleLine="true"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <!-- Task Row 3 -->
+        <LinearLayout
+            android:id="@+id/task_row_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/task_time_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全天"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#64748B"
+                android:background="@drawable/widget_time_pill"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp" />
+
+            <TextView
+                android:id="@+id/task_title_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="任务名称"
+                android:textSize="12sp"
+                android:textColor="#1E293B"
+                android:layout_marginLeft="6dp"
+                android:layout_marginStart="6dp"
+                android:singleLine="true"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <!-- Task Row 4 -->
+        <LinearLayout
+            android:id="@+id/task_row_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/task_time_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18:00"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#4F46E5"
+                android:background="@drawable/widget_time_pill"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp" />
+
+            <TextView
+                android:id="@+id/task_title_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="任务名称"
+                android:textSize="12sp"
+                android:textColor="#1E293B"
+                android:layout_marginLeft="6dp"
+                android:layout_marginStart="6dp"
+                android:singleLine="true"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <!-- Empty State View -->
+        <TextView
+            android:id="@+id/widget_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="今日暂无日程安排"
+            android:textSize="12sp"
+            android:textColor="#94A3B8"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Bottom footer: More tasks hint or app mark -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/widget_more_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ 3 more"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#6366F1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timeline Memo"
+            android:textSize="9sp"
+            android:textColor="#CBD5E1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

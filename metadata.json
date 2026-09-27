@@ -1,0 +1,6 @@
+{
+  "name": "Timeline Memo",
+  "description": "移动端优先的课表式时间线备忘录与待办清单应用，支持离线与PWA安装。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

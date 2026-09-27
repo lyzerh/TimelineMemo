@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Timeline Memo</string>
+    <string name="title_activity_main">Timeline Memo</string>
+    <string name="package_name">com.timelinememo.app</string>
+    <string name="custom_url_scheme">com.timelinememo.app</string>
+    <string name="widget_name">今日备忘与课表</string>
+    <string name="widget_description">桌面快捷查看今日时间线待办与完成度</string>
+</resources>
